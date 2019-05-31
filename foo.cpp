@@ -16,7 +16,7 @@ static int32_t* make_map(std::ifstream& infile, const int32_t w, const int32_t h
     {
         std::string line;
         std::getline(infile, line);
-		std::istringstream iss(line);
+        std::istringstream iss(line);
 
         for (int32_t c = 0; c < w; c++)
         {
@@ -30,18 +30,18 @@ static int32_t* make_map(std::ifstream& infile, const int32_t w, const int32_t h
 
 int main(void)
 {
-	std::ifstream infile("thefile.txt");
+    std::ifstream infile("thefile.txt");
 
-	std::string line;
+    std::string line;
 
-	std::getline(infile, line);
+    std::getline(infile, line);
     int32_t n = std::stol(line);
 
     while (n > 0)
     {
         n--;
         std::getline(infile, line);
-		std::istringstream iss(line);
+        std::istringstream iss(line);
         int32_t w, h;
         iss >> w >> h;
 
@@ -49,7 +49,7 @@ int main(void)
         int32_t** flowmap = get_water_flow(map, w, h);
         int
 
-        exit(0);
+            exit(0);
 
         free(map);
 
